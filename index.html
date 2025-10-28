@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<script>
+  // Configuration
+  const titleText = "......Now Playing : luvsic hexology......";
+  const speed = 150;
+  
+  let position = 0;
+  
+  function animateTitle() {
+    // Shift string: move first character to the end
+    document.title = titleText.substring(position) + titleText.substring(0, position);
+    
+    // Update position and reset when end is reached
+    position = (position + 1) % titleText.length;
+  }
+  // Start animation
+  setInterval(animateTitle, speed);
+</script>
+<html lang="en">
+
+<head>
+    <title> Test website</title>
+    <link rel = "stylesheet" href = "style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body class="crt">
+	
+	<div class="wrapper">
+		
+		<div class="header">
+			<img src="img/groovybadtz.gif" alt="Description" class="header-image">
+			<div class="menu-container">
+				<div class="menu">
+					<a href="home.html" target="content">Home</a> /
+					<a href="about.html" target="content">About</a> /
+					<a href="stuff.html" target="content">Stuff</a> /
+					<a href="projects.html" target ="content">Projects</a> /
+					<a href="photos.html" target="content">Photos</a> /  
+				</div>
+				<div class="menu2">
+					<a href="her.html" target="content"> &#10047;</a>
+				</div>
+			</div>
+		</div>
+		
+			<div class="window" style="height: 649px">
+		<div class="title-bar">
+			<div class="title-bar-text">Hello!</div>
+			<div class="title-bar-controls">
+				<button aria-label="Minimize"></button>
+				<button aria-label="Maximize"></button>
+				<button aria-label="Close"></button>
+			</div>
+		</div>
+		<div class="iframe-container">
+		<div class="window-body">
+			<div class="main">
+				<iframe name="content" title="Index" src="home.html"></iframe>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+	<script src="crt.js"></script>
+	
+	    <footer class="site-footer">
+            <div class="footer-content">
+                <button id="crt-toggle" class="footer-button" title="Toggle CRT Effect">CRT: ON</button>
+            </div>
+        </footer>
+	
+</body>
+
+
+</html>
