@@ -76,16 +76,15 @@ img {
 }
 
 .header-image {
-    max-height: 220px; /* Keep max height */
-    height: auto; /* Allow scaling */
-    width: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Don't exceed container width */
+    max-height: 220px; 
+    height: auto; 
+    width: auto; 
+    max-width: 100%;
     margin: 13px auto -95px auto;
     display: block;
 }
 
 .wrapper-container {
-    justify-content: center;
     gap: 20px; /* Space between wrappers */
     max-width: 753px; /* Adjust as needed */
     margin: 0 auto;
@@ -99,8 +98,8 @@ img {
 }
 
 .wrapper2 {
-    max-width: 327px;
-    margin-top: 17px;
+    margin-top: 1px;
+	align-self: flex-start;
 }
 
 .wrapper3 {
@@ -110,26 +109,60 @@ img {
 }
 
 .wrapper3 .window {
-    width: 320px !important; /* Override the general window rule */
+    width: 320px !important; 
     height: 320px !important;
-	max-width: 340px !important;/* Also override max-width */
+	max-width: 340px !important;
 }
+
+.side-by-side-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 753px;
+    margin: 2px auto 0 auto;
+    width: 100%; 
+    flex-wrap: wrap;
+}
+
+.wrapper2, .wrapper4 {
+    flex: 0 0 auto;
+    margin: 0; 
+}
+
+
+.wrapper2 .window,
+.wrapper4 .window {
+    width: 378px !important;
+    max-width: 390px !important;
+}
+
+.wrapper4 .window {
+    height: auto !important;
+	align-self: flex-end
+}
+
+.wrapper4 .window-body {
+    height: auto;
+    min-height: 200px;
+}
+
+.wrapper4 iframe {
+    width: 100%;
+    height: 286px;
+    border: none;
+}
+
 
 .menu-container {
     display: flex;
-    justify-content: center; /* centers both menus */
-    align-items: center; /* vertically aligns them */
+    justify-content: center; 
+    align-items: center; 
     margin-bottom: 12px;
     margin-top: 24px;
 }
 
-.menu, .menu2 {
-    margin: 0; /* remove the individual margins since container has them */
-}
 
-/* Optional: add some spacing between the two menus */
 .menu {
-    margin-right: 3px; /* space between menu and menu2 */
+    margin-right: 3px;
 }
 
 .menu {
@@ -154,14 +187,14 @@ img {
 
 .main {
     height: 610px;
-    width: 100%; /* Change from 753px to 100% */
+    width: 100%; 
     background-image: url("placeholder");
     position: relative;
 }
 
 .wrapper2 .window {
-    width: 320px !important; /* Override the general window rule */
-    max-width: 340px !important; /* Also override max-width */
+    width: 346px !important; 
+    max-width: 500px !important; 
 }
 
 .main iframe {
@@ -169,7 +202,7 @@ img {
     position: absolute;
     top: -3px;
     left: -6px;
-    width: calc(100% + 11px); /* Adjust for the negative left position */
+    width: calc(100% + 11px); 
     height: 441px;
 }
 
@@ -189,6 +222,12 @@ img {
 	width: 100%;
     overflow: hidden;
     height: 286px; /* Adjust as needed */
+    border: none;
+}
+
+.wrapper2 iframe {
+	width: 100%;
+    height: 286px;
     border: none;
 }
 
@@ -397,6 +436,7 @@ input[type="submit"]:disabled {
 }
 .title-bar-controls {
 	display: flex;
+	
 }
 .title-bar-controls button {
 	display: block;
