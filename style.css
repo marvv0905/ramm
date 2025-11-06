@@ -92,6 +92,20 @@ img {
 	width: 90%
 }
 
+.wrapper-container2 {
+    gap: 20px; /* Space between wrappers */
+    max-width: 753px; /* Adjust as needed */
+    margin: 0 auto;
+	width: 85%;
+	margin-top: 10px;
+	margin-bottom: -10px
+}
+
+.wrapper5 {
+    max-width: 594px;
+    margin-top: -6px;
+}
+
 .wrapper {
     max-width: 753px;
     margin-top: -6px;
@@ -128,6 +142,10 @@ img {
     margin: 0; 
 }
 
+.wrapper5 {
+	flex: 0 0 auto;
+	margin: 0;
+}
 
 .wrapper2 .window,
 .wrapper4 .window {
@@ -177,6 +195,18 @@ img {
 	font-size: 18px
 }
 
+.blink_me {
+	animation: blinker 1s linear infinite;
+	display: inline !important;
+	vertical-align: baseline; 
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 .menu a {
 	color: lime;
 }
@@ -195,6 +225,13 @@ img {
 .wrapper2 .window {
     width: 346px !important; 
     max-width: 500px !important; 
+}
+
+.wrapper5 .window {
+    width: 438px !important; 
+    max-width: 500px !important; 
+	margin-bottom: -55px !important;
+	z-index: -10
 }
 
 .main iframe {
@@ -418,6 +455,7 @@ input[type="submit"]:disabled {
 	width: 100% !important; /* Override inline style */
     max-width: 753px; /* But don't exceed original design size */
 }
+
 .title-bar {
 	align-items: center;
 	background: linear-gradient(90deg, navy, #1084d0);
@@ -968,16 +1006,17 @@ ul.tree-view details > summary::marker {
 	content: "";
 }
 pre {
-	background: #fff;
+	background: black;
 	box-shadow:
 		inset -1px -1px #fff,
 		inset 1px 1px grey,
 		inset -2px -2px #dfdfdf,
 		inset 2px 2px #0a0a0a;
-	display: block;
 	margin: 0;
-	padding: 12px 8px;
+	padding: 9px 8px;
+	color: #d5d5d5
 }
+
 code,
 code * {
 	font-family: monospace;
